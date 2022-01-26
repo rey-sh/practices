@@ -136,6 +136,7 @@ class Arena():
         else:
             self._info("This game is a draw.\n")
         self.episodes.append((episode,reward))
+        self.recycle_cards(player, dealer)
         self._info("======== Game over ========\n")
         
         return episode, reward
